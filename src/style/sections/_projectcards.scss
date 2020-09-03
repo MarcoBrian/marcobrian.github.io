@@ -1,0 +1,95 @@
+
+
+
+.wrapper-grid{
+    display: grid;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit,minmax(300px,350px));
+    justify-content: center;
+}
+.card{
+    -webkit-box-shadow: 10px 10px 13px 2px rgba(184,184,184,0.76);
+    -moz-box-shadow: 10px 10px 13px 2px rgba(184,184,184,0.76);
+    box-shadow: 10px 10px 13px 2px rgba(184,184,184,0.76);
+    border-radius: 10px;
+    margin:20px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease
+    
+}
+
+.card:hover{
+    -webkit-transform:translateY(-10px);
+    transform: translateY(-10px)
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-p{
+    font-size:2rem;
+    padding:2rem;
+    text-align:left;
+    @include respond(phone-xs){
+        font-size:0.8rem;
+    }
+    
+    @include respond(phone){
+        font-size:1rem;
+    }
+    
+    @include respond(tab-port){
+        font-size:1.5rem;
+
+    }
+    
+    @include respond(tab-land){
+        font-size:1.5rem;
+
+    }
+
+    
+}
+
+
+.link-list{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top:auto;
+  }
+  
+  .link-item-icons{
+    color: black;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 300;
+    margin-left: 1.5rem;
+    
+    
+    @include respond(tab-land) {
+      font-size: 3rem;
+    }
+    @include respond(tab-port) {
+      font-size: 3rem;
+      text-align: left;
+    }
+    @include respond(phone) {
+      font-size: 3rem;
+      line-height: 1.5;
+    }
+    @include respond(phone-xs) {
+      font-size: 3rem;
+    }
+  }
+
+  .link-item-icons:hover{
+      color:$primary-color;
+      transition: all 0.3s ease-in-out;
+  }
