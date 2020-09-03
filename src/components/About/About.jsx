@@ -8,6 +8,7 @@ import PortfolioContext from '../../context/context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Skills from './Skills.jsx';
 import EmptySpace from '../Utilities/EmptySpace.jsx';
+import ResumeCV from '../../assets/resume.pdf';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
@@ -119,7 +120,7 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-btn cta-btn--resume"
-                      href={resume}
+                      href={ResumeCV}
                     >
                       My Resume
                     </a>

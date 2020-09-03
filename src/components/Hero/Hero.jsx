@@ -59,9 +59,12 @@ const Header = () => {
             <li className="nav-item-dummy">
               /
             </li>
+            <a href="https://marcobrian-blog.herokuapp.com" target="_blank">
             <li className="nav-item">
-              Contact 
+              Blog 
             </li>
+            </a>
+            
             
           </ul>
 
