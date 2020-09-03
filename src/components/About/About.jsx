@@ -76,7 +76,7 @@ const About = () => {
                 <p className="about-wrapper__info-text">
                 I love working on projects that will
                 <span className="text-color-main" style={{"fontWeight":"400"}} > deliver value </span>and those that are challenging enough to make you
-                <span className="text-color-main" style={{"fontWeight":"400"}} > think & learn </span> 
+                <span className="text-color-main" style={{"fontWeight":"400"}} > learn </span> 
                  while doing it. 
                 </p>
               </div>
