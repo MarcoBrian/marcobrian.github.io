@@ -8,7 +8,7 @@ import PortfolioContext from '../../context/context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Skills from './Skills.jsx';
 import EmptySpace from '../Utilities/EmptySpace.jsx';
-import ResumeCV from '../../assets/resume.pdf';
+import ResumeCV from '../../assets/MarcoCV.pdf';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
