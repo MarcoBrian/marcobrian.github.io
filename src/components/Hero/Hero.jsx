@@ -34,7 +34,7 @@ const Header = () => {
           <h1 className="hero-title">
             {subtitle || "I'm a "}
             <div class="rw-words rw-words-1">      
-                <span> Final Year Student </span>
+                <span> Product Manager </span>
                 <span> Software Engineer </span>
                 <span> Technologist </span>
                 <span> Musician </span>

@@ -30,6 +30,11 @@ const project_data = [
         blog:"/summer-2020-internship/"
     },
     {
+        name:"Moodify: AI-based Song Recommendations for Spotify Users",
+        desc:"Using Deep Neural Inception Net to detect facial emotion and recommend songs through Spotify API",
+        github:"https://github.com/MarcoBrian/aiapplication_webdev"
+    },
+    {
         name:"COVID19 TelegramBot",
         desc:"This is a telegram bot that fetches data from the John Hopkins University \
         COVID-19 dataset (JHU CSSE) and present it to you in the form of a chat.",

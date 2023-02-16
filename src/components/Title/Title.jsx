@@ -6,7 +6,7 @@ import Wave from './Wave.js';
 const Title = ({ title, positioning , title_pos }) => (
   <Fade top cascade duration={1000} delay={300} distance="20px">
     <div className={positioning}>
-    <Wave positioning={positioning}/>
+    {/* <Wave positioning={positioning}/> */}
     <h2 className={title_pos}>{title}</h2>
     </div>
   </Fade>

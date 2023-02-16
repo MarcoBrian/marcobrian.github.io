@@ -37,8 +37,8 @@ function App() {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
       <About />
-      <Projectcards/>
-      <WaveFooter/>
+      <Projectcards />
+      <WaveFooter />
       <Contact />
       <Footer />
     </PortfolioProvider>
