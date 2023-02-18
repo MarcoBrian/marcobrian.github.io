@@ -1,3 +1,31 @@
+# How to deploy changes and updates to the portfolio 
+
+The `source` branch is the JS source code so this is where you can make changes to the file 
+
+After making changes and you are ready to deploy, run this command
+
+```bash
+
+npm run deploy:github 
+
+```
+
+It will automatically build and deploy the changes to github pages. The build files will be pushed to the `master` branch. 
+
+Therefore make sure when you go to 
+`Settings >> Pages >> Build and Deployment` 
+
+Click `Source` and choose option `Deploy From Branch`
+
+Under `Branch`
+
+Make sure to pick the `master` branch and `/root`
+
+
+
+
+
+
 
 # Gatsby Simplefolio ⚡️ [![GitHub](https://img.shields.io/github/license/cobidev/gatsby-simplefolio?color=blue)](https://github.com/cobidev/gatsby-simplefolio/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/cobidev/gatsby-simplefolio) ![GitHub forks](https://img.shields.io/github/forks/cobidev/gatsby-simplefolio)
 
