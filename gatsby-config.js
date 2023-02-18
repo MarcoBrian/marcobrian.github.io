@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/marcobrian.github.io',
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
@@ -30,6 +31,6 @@ module.exports = {
         display: `standalone`,
         icon: 'src/images/favicon.png',
       },
-    }
+    },
   ],
 };
