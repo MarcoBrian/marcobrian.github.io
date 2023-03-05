@@ -71,7 +71,7 @@ const Header = () => {
           <ul className="nav-list">
           
           <li>
-          <a class="nav-item-icons" href="https://www.linkedin.com/in/marco-brian-widjaja-424017159/" target="_blank">
+          <a class="nav-item-icons" href="https://www.linkedin.com/in/marco-brian-w-424017159/" target="_blank">
               <FontAwesomeIcon icon={['fab', 'linkedin']} />
               </a>
             </li>

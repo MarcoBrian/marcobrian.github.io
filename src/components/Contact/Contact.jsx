@@ -20,7 +20,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn cta-btn--resume"
-              href='https://www.linkedin.com/in/marco-brian-widjaja-424017159/'
+              href='https://www.linkedin.com/in/marco-brian-w-424017159/'
             >
               {"Let's Connect!"}
             </a>

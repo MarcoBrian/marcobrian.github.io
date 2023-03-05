@@ -69,9 +69,16 @@ const About = () => {
                 <div className="about-wrapper__info">
                   <p className="about-wrapper__info-text">
                     I have a profound passion for engaging with projects that offer
-                    <span className="text-color-main" style={{ "fontWeight": "400" }} > tangible and meaningful results </span>
-                    , while also providing sufficient challenges that facilitate personal and professional growth through
-                    <span className="text-color-main" style={{ "fontWeight": "400" }} > hands-on experience </span>
+                    <span className="text-color-main" style={{ fontWeight: '400' }}>
+                      {' '}
+                      tangible and meaningful results{' '}
+                    </span>
+                    , while also providing sufficient challenges that facilitate personal and
+                    professional growth through
+                    <span className="text-color-main" style={{ fontWeight: '400' }}>
+                      {' '}
+                      hands-on experience{' '}
+                    </span>
                   </p>
                 </div>
               </Col>
