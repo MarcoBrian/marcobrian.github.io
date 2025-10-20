@@ -1,0 +1,222 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Marco's Portfolio Design Tokens */
+@layer base, components, utilities;
+
+@layer components {
+  /* Force accent color for text with maximum specificity */
+  .text-custom-accent,
+  span.text-custom-accent,
+  a.text-custom-accent,
+  button.text-custom-accent,
+  [data-slot="button"].text-custom-accent {
+    color: var(--accent) !important;
+  }
+  
+  /* Additional specificity for project links */
+  a.text-custom-accent.font-medium {
+    color: var(--accent) !important;
+  }
+  
+  /* Maximum specificity for project GitHub links */
+  a.inline-flex.items-center.gap-2.text-custom-accent.font-medium {
+    color: var(--accent) !important;
+  }
+  
+  /* Ultra-specific rule for project links */
+  a.inline-flex.items-center.gap-2.text-custom-accent.font-medium.group-hover\:gap-3 {
+    color: var(--accent) !important;
+  }
+  
+  /* Maximum specificity for project GitHub links */
+  a.inline-flex.items-center.gap-2.text-custom-accent.font-medium.group-hover\:gap-3.transition-all.duration-200 {
+    color: var(--accent) !important;
+  }
+  
+  /* Ultra-specific rule for project GitHub links */
+  a.inline-flex.items-center.gap-2.text-custom-accent.font-medium.group-hover\:gap-3.transition-all.duration-200:hover {
+    color: var(--accent) !important;
+  }
+  
+  /* Maximum specificity for project GitHub links */
+  a.inline-flex.items-center.gap-2.text-custom-accent.font-medium.group-hover\:gap-3.transition-all.duration-200:focus {
+    color: var(--accent) !important;
+  }
+}
+
+@layer base {
+  :root {
+    --bg: #ffffff;
+    --text: #0b1220;
+    --muted-text: #3b4759;
+    --surface: #f7f8fa;
+    --border: #edeff3;
+    --my-accent: #1e3a8a; /* Navy blue */
+    --accent-2: #6e6ade;
+    
+    /* Radii */
+    --radius-lg: 1.5rem;
+    --radius: 1rem;
+  }
+  
+  .dark {
+    --bg: #0b1220;
+    --text: #ffffff;
+    --muted-text: #9ca3af;
+    --surface: #1f2937;
+    --border: #374151;
+    --my-accent: #3b82f6; /* Lighter navy blue for dark mode */
+    --accent-2: #8b5cf6;
+  }
+  
+  /* Custom utility classes for our design tokens */
+  .text-custom-text { color: var(--text); }
+  .text-custom-muted { color: var(--muted-text); }
+  .bg-custom-bg { background-color: var(--bg); }
+  .bg-custom-surface { background-color: var(--surface); }
+  .border-custom-border { border-color: var(--border); }
+  .text-custom-accent { color: var(--my-accent) !important; }
+  .bg-custom-accent { background-color: var(--my-accent); }
+  .hover\:bg-custom-accent:hover { background-color: var(--my-accent); }
+  .hover\:text-custom-accent:hover { color: var(--my-accent); }
+  .hover\:border-custom-accent:hover { border-color: var(--my-accent); }
+  .focus\:border-custom-accent:focus { border-color: var(--my-accent); }
+  .focus\:ring-custom-accent:focus { --tw-ring-color: var(--my-accent); }
+  
+  /* Additional button utilities */
+  .hover\:text-white:hover { color: white; }
+  .ring-custom-accent { --tw-ring-color: var(--my-accent); }
+  
+  button.border-custom-accent,
+  a.border-custom-accent,
+  [data-slot="button"].border-custom-accent {
+    border-color: var(--my-accent);
+  }
+  
+  button.hover\:bg-custom-accent:hover,
+  a.hover\:bg-custom-accent:hover,
+  [data-slot="button"].hover\:bg-custom-accent:hover {
+    background-color: var(--my-accent);
+  }
+  
+  /* Explicit button styling for navy blue outline with hover fill */
+  button.bg-transparent.text-custom-accent.border-custom-accent,
+  a.bg-transparent.text-custom-accent.border-custom-accent,
+  [data-slot="button"].bg-transparent.text-custom-accent.border-custom-accent {
+    background-color: transparent;
+    color: var(--my-accent);
+    border-color: var(--my-accent);
+    border-width: 2px;
+  }
+  
+  button.bg-transparent.text-custom-accent.border-custom-accent:hover,
+  a.bg-transparent.text-custom-accent.border-custom-accent:hover,
+  [data-slot="button"].bg-transparent.text-custom-accent.border-custom-accent:hover {
+    background-color: var(--my-accent);
+    color: white;
+    border-color: var(--my-accent);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Blinking caret animation */
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
