@@ -44,7 +44,7 @@ export function NewsShowcase() {
     <>
       <TwitterScript />
       <ScrollbarStyles />
-      <section className="px-6 py-16 bg-custom-surface">
+      <section id="press" className="px-6 py-16 bg-custom-surface">
         <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

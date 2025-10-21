@@ -1,29 +1,32 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { XLogo } from "@/components/x-logo"
 import { GitHubLogo } from "@/components/github-logo"
 import { LinkedInLogo } from "@/components/linkedin-logo"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export function Hero() {
   const [currentText, setCurrentText] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   
   const phrases = ["git add 'product manager experience' ", "git commit -m 'web3 builder + hackathon winner' ", "git push origin keep_building"]
   
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects')
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       })
     }
+    // Close mobile menu after navigation
+    setIsMobileMenuOpen(false)
   }
    
   useEffect(() => {
@@ -54,8 +57,115 @@ export function Hero() {
   }, [currentText, currentIndex, isDeleting, phrases])
 
   return (
-    <section className="relative px-6 h-screen flex items-center">
-      <div className="mx-auto max-w-5xl">
+    <section className="relative px-6 h-screen flex flex-col">
+      {/* Navigation Bar */}
+      <nav className="w-full py-6">
+        <div className="mx-auto max-w-5xl">
+          <div className="flex items-center justify-end">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-2">
+              <button
+                onClick={() => scrollToSection('about')}
+                className="text-custom-muted hover:text-custom-accent transition-colors duration-200 text-sm font-medium"
+              >
+                About
+              </button>
+              <span className="text-custom-muted">/</span>
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="text-custom-muted hover:text-custom-accent transition-colors duration-200 text-sm font-medium"
+              >
+                Projects
+              </button>
+              <span className="text-custom-muted">/</span>
+              <button
+                onClick={() => scrollToSection('experience')}
+                className="text-custom-muted hover:text-custom-accent transition-colors duration-200 text-sm font-medium"
+              >
+                Experience
+              </button>
+              <span className="text-custom-muted">/</span>
+              <button
+                onClick={() => scrollToSection('press')}
+                className="text-custom-muted hover:text-custom-accent transition-colors duration-200 text-sm font-medium"
+              >
+                Press
+              </button>
+            </div>
+
+            {/* Mobile Hamburger Menu */}
+            {!isMobileMenuOpen && (
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden text-custom-muted hover:text-custom-accent transition-colors duration-200"
+              >
+                <Menu size={24} />
+              </button>
+            )}
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Navigation Dropdown */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -100, scaleY: 0 }}
+            animate={{ opacity: 1, y: 0, scaleY: 1 }}
+            exit={{ opacity: 0, y: -100, scaleY: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            style={{ transformOrigin: "top" }}
+            className="md:hidden fixed top-0 left-0 right-0 bg-white "
+          >
+          <div className="px-6 py-8">
+            <div className="flex items-center justify-between">
+              {/* Navigation items aligned to the left */}
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => scrollToSection('about')}
+                  className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-base font-medium"
+                >
+                  About
+                </button>
+                <span className="text-gray-400">/</span>
+                <button
+                  onClick={() => scrollToSection('projects')}
+                  className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-base font-medium"
+                >
+                  Projects
+                </button>
+                <span className="text-gray-400">/</span>
+                <button
+                  onClick={() => scrollToSection('experience')}
+                  className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-base font-medium"
+                >
+                  Experience
+                </button>
+                <span className="text-gray-400">/</span>
+                <button
+                  onClick={() => scrollToSection('press')}
+                  className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-base font-medium"
+                >
+                  Press
+                </button>
+              </div>
+              
+              {/* X button aligned to the right */}
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+              >
+                <X size={24} />
+              </button>
+            </div>
+          </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Hero Content */}
+      <div className="flex-1 flex items-center">
+        <div className="mx-auto max-w-5xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,7 +197,7 @@ export function Hero() {
           {/* CTAs */}
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <Button
-              onClick={scrollToProjects}
+              onClick={() => scrollToSection('projects')}
               size="lg"
               className="
                 rounded-full 
@@ -141,6 +251,7 @@ export function Hero() {
             </div>
           </div>
         </motion.div>
+        </div>
       </div>
     </section>
   )
