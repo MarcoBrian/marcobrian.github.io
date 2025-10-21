@@ -56,6 +56,28 @@ export function Hero() {
     return () => clearTimeout(timeout)
   }, [currentText, currentIndex, isDeleting, phrases])
 
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isMobileMenuOpen) {
+        const target = event.target as HTMLElement
+        // Check if click is outside the mobile menu
+        if (!target.closest('[data-mobile-menu]')) {
+          setIsMobileMenuOpen(false)
+        }
+      }
+    }
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isMobileMenuOpen])
+
   return (
     <section className="relative px-6 h-screen flex flex-col">
       {/* Navigation Bar */}
@@ -94,14 +116,12 @@ export function Hero() {
             </div>
 
             {/* Mobile Hamburger Menu */}
-            {!isMobileMenuOpen && (
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden text-custom-muted hover:text-custom-accent transition-colors duration-200"
-              >
-                <Menu size={24} />
-              </button>
-            )}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-custom-muted hover:text-custom-accent transition-colors duration-200"
+            >
+              <Menu size={24} />
+            </button>
           </div>
         </div>
       </nav>
@@ -110,16 +130,16 @@ export function Hero() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -100, scaleY: 0 }}
-            animate={{ opacity: 1, y: 0, scaleY: 1 }}
-            exit={{ opacity: 0, y: -100, scaleY: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            style={{ transformOrigin: "top" }}
-            className="md:hidden fixed top-0 left-0 right-0 bg-white "
+            className="md:hidden fixed top-0 left-0 right-0 bg-white z-50"
+            data-mobile-menu
           >
           <div className="px-6 py-8">
-            <div className="flex items-center justify-between">
-              {/* Navigation items aligned to the left */}
+            <div className="flex items-center justify-center">
+              {/* Navigation items centered */}
               <div className="flex items-center space-x-2">
                 <button
                   onClick={() => scrollToSection('about')}
@@ -150,13 +170,6 @@ export function Hero() {
                 </button>
               </div>
               
-              {/* X button aligned to the right */}
-              <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
-              >
-                <X size={24} />
-              </button>
             </div>
           </div>
           </motion.div>
