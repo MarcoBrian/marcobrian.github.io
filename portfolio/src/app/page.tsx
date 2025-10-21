@@ -1,4 +1,5 @@
 import { Hero } from "@/components/hero"
+import { NewsShowcase } from "@/components/news-showcase"
 import { Projects } from "@/components/projects"
 import { WorkExperience } from "@/components/work-experience"
 import { HackathonJourney } from "@/components/hackathon-journey"
@@ -14,8 +15,8 @@ export default function Home() {
       <About />
       <Projects />
       <WorkExperience />
-      <HackathonJourney />
-      <Now />
+      {/* <HackathonJourney /> */}
+      <NewsShowcase />
       <Footer />
     </main>
   )

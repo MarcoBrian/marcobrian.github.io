@@ -3,13 +3,14 @@
 import { motion } from "framer-motion"
 
 const skills = [
+  "Product Management",
+  "Product Strategy",
+  "Software Engineering",
+  "UI/UX",
+  "Data Analysis",
+  "Web3 Development",
   "Solidity",
-  "Foundry",
-  "Chainlink",
-  "Uniswap v4 Hooks",
-  "EVM",
-  "DeFi Protocols",
-  "Smart Contract Security",
+  "Smart Contract Development",
   "Protocol Design",
 ]
 
@@ -27,8 +28,8 @@ export function About() {
 
           <div className="space-y-8">
             <p className="text-lg text-[var(--text)] leading-relaxed">
-            Hi, I'm Marco Widjaja, a Product Manager and Web3 builder passionate about DeFi and bringing the world on-chain.
-            Previously, I worked at Shopee, where I led initiatives across user growth, authentication, and platform infrastructure. After 3.5+ years, I left to pursue a path of building, creating products at the intersection of DeFi and AI.
+            Hi, I'm Marco Widjaja, a Product Manager and Web3 builder passionate about DeFi and bringing the world on-chain. I graduated from University of Hong Kong with a Bachelor's degree in Computer Science (1st Class Honors).
+            I worked at Shopee as a PM, where I led initiatives across user growth, authentication, and platform infrastructure. After 3.5+ years, I left to pursue a path of building, creating products at the intersection of DeFi and AI.
               </p>
 
               <p className="text-lg text-[var(--text)] leading-relaxed">

@@ -67,8 +67,7 @@ export function Hero() {
           </h1>
 
           <p className="text-pretty text-xl text-custom-muted md:text-2xl max-w-3xl leading-relaxed">
-            An experienced Product Manager and Web3 builder. 
-            
+          I'm an experienced Product Manager and Web3 builder. Blending product thinking with engineering execution.            
           </p>
 
           {/* Prompt Bar */}

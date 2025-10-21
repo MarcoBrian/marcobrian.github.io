@@ -5,11 +5,11 @@ import Image from "next/image"
 
 const experiences = [
   {
-    company: "Self Employed",
-    position: "Web3 Builder",
+    company: "Web3 Builder",
+    position: "Self-Employed",
     duration: "April 2025 - Present",
     description: "Building products at the intersection of DeFi and AI",
-    logo: "/uniswap.png",
+    logo: "/option.png",
   },
   {
     company: "Shopee",
@@ -46,7 +46,7 @@ export function WorkExperience() {
         >
           <h2 className="text-4xl font-bold text-[var(--text)] mb-4">Work Experience</h2>
           <p className="text-[var(--muted-text)] text-lg mb-12 leading-relaxed">
-            Building the future of decentralized finance through innovative protocols and products.
+Nothing much to see here
           </p>
 
           <div className="relative">
