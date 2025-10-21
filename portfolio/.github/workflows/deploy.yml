@@ -1,9 +1,7 @@
-name: Deploy to GitHub Pages
+name: Deploy Next.js to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
 jobs:
@@ -27,8 +25,8 @@ jobs:
       run: npm run build
       
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
+      uses: JamesIves/github-pages-deploy-action@v4.6.3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./out
+        branch: gh-pages
+        folder: out
+        token: ${{ secrets.GITHUB_TOKEN }}
