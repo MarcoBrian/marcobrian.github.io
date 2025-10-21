@@ -15,9 +15,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Marco Brian Widjaja - DeFi Builder",
+  title: "Marco Brian Widjaja",
   description:
-    "Product-minded DeFi builder designing and shipping protocols across options, payments, and parametric insurance.",
+    "Product-minded Web3 builder",
   generator: "v0.app",
 }
 
