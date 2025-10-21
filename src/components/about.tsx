@@ -28,16 +28,22 @@ export function About() {
 
           <div className="space-y-8">
             <p className="text-lg text-[var(--text)] leading-relaxed">
-            Hi, I'm Marco Widjaja, a Product Manager and Web3 builder passionate about DeFi and bringing the world on-chain. I graduated from University of Hong Kong with a Bachelor's degree in Computer Science (1st Class Honors).
-            I worked at Shopee as a PM, where I led initiatives across user growth, authentication, and platform infrastructure. After 3.5+ years, I left to pursue a path of building, creating products at the intersection of DeFi and AI.
+            Hi, I'm Marco Widjaja, a Product Manager and Web3 builder passionate about DeFi and bringing the world on-chain. 
+            I graduated from <b> University of Hong Kong </b> with a 
+            Bachelor's degree in <b> Computer Science (1st Class Honors)</b>. 
+            I worked at <b> Shopee </b> as a PM, where I led initiatives across user growth, authentication, and platform infrastructure. After 3.5+ years, I left to pursue a path of building, creating products at the intersection of DeFi and AI.
               </p>
 
               <p className="text-lg text-[var(--text)] leading-relaxed">
-            Since then, I've built multiple projects recognized by ETHGlobal and Token2049, including 1Option, a decentralized options protocol, and MicroPay, a cross-chain micropayments framework for AI agents. I'm currently part of the Uniswap Hook Incubator (UHI7), exploring how composable DeFi can power the next generation of on-chain products and shape the future of money.
+            Since then, I've built multiple projects recognized by 
+            <b> ETHGlobal and Token2049 </b>, including 
+            <b> 1Option</b>, a decentralized options protocol, and
+            <b> MicroPay</b>, a cross-chain micropayments framework for AI agents. 
+            I'm currently part of the <b> Uniswap Hook Incubator (UHI7) </b>, exploring how composable DeFi can power the next generation of on-chain products and shape the future of money.
               </p>
 
             <p className="text-lg text-[var(--text)] leading-relaxed">
-            Beyond tech, I co-run Mercury Sportswear, a golf apparel brand blending sport, design, and entrepreneurship.
+            Beyond tech, I co-run <b> Mercury Sportswear</b>, a golf apparel brand blending sport, design, and entrepreneurship.
             </p>
 
             <p className="text-lg text-[var(--text)] leading-relaxed">

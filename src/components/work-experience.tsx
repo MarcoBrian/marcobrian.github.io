@@ -46,12 +46,11 @@ export function WorkExperience() {
         >
           <h2 className="text-4xl font-bold text-[var(--text)] mb-4">Work Experience</h2>
           <p className="text-[var(--muted-text)] text-lg mb-12 leading-relaxed">
-Nothing much to see here
           </p>
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-6 top-6 bottom-6 w-px bg-[var(--border)] hidden md:block" />
+            <div className="absolute left-3 top-6 bottom-6 w-px bg-[var(--border)] hidden md:block" />
 
             <div className="space-y-8">
               {experiences.map((experience, index) => (
@@ -64,8 +63,7 @@ Nothing much to see here
                   className="relative flex gap-6 items-center"
                 >
                   {/* Timeline dot */}
-                  <div className="hidden md:flex relative z-10 h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white border-2 border-[var(--accent)]">
-                    <div className="h-3 w-3 rounded-full bg-[var(--accent)]" />
+                  <div className="hidden md:flex relative z-10 h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-800 -mr-2">
                   </div>
 
                   {/* Content card */}
