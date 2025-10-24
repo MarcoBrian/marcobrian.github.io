@@ -81,7 +81,7 @@ export function Hero() {
   return (
     <section className="relative px-6 h-screen flex flex-col">
       {/* Navigation Bar */}
-      <nav className="w-full py-6">
+      <nav className="w-full py-6 bg-white sticky top-0 z-50">
         <div className="mx-auto max-w-5xl">
           <div className="flex items-center justify-end">
             {/* Desktop Navigation */}
@@ -118,7 +118,7 @@ export function Hero() {
             {/* Mobile Hamburger Menu */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-custom-muted hover:text-custom-accent transition-colors duration-200"
+              className={`md:hidden text-custom-muted hover:text-custom-accent transition-colors duration-200 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}
             >
               <Menu size={24} />
             </button>

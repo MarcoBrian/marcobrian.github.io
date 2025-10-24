@@ -7,7 +7,7 @@ const experiences = [
   {
     company: "Web3 Builder",
     position: "Self-Employed",
-    duration: "April 2025 - Present",
+    duration: "May 2025 - Present",
     description: "Building products at the intersection of DeFi and AI",
     logo: "/option.png",
   },

@@ -9,6 +9,15 @@ import { NewsItem as NewsItemType } from "./news-showcase/types"
 
 const newsItems: NewsItemType[] = [
   {
+    title: "Beyond the Hackathon: How to Keep Building in Polkadot",
+    description: "Speaker at OpenGuild event discussing post-hackathon development strategies",
+    source: "X (Twitter)",
+    date: "October 2025",
+    url: "https://twitter.com/openguildwtf/status/1981706224321376685",
+    tweetId: "1981706224321376685",
+    type: "twitter"
+  },
+  {
     title: "Token2049 Origins - MicroPay Demo",
     description: "Live Demo of MicroPay at Token2049 Origins Hackathon",
     source: "YouTube",
@@ -53,9 +62,9 @@ export function NewsShowcase() {
           transition={{ duration: 0.5 }}
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-custom-text mb-4">Featured in the News</h2>
+            <h2 className="text-3xl font-bold text-custom-text mb-4">Press & Media Coverage</h2>
             <p className="text-custom-muted text-lg">
-              Media coverage of my work and achievements
+              Press and media coverage of my work and achievements
             </p>
           </div>
 
