@@ -18,6 +18,15 @@ const newsItems: NewsItemType[] = [
     type: "youtube"
   },
   {
+    title: "Stealthfolio ",
+    description: "Stealthfolio - Demo Day",
+    source: "X (Twitter)",
+    date: "Dec 2025",
+    url: "https://x.com/AtriumAcademy/status/2002044120613961982",
+    tweetId: "2002044120613961982",
+    type: "twitter"
+  },
+  {
     title: "Beyond the Hackathon: How to Keep Building in Polkadot",
     description: "Speaker at OpenGuild event discussing post-hackathon development strategies",
     source: "X (Twitter)",
