@@ -23,16 +23,22 @@ const projects = [
     demo: "https://github.com/X402-Universal/X402-Universal/tree/main",
   },
   {
+    name: "Stealthfolio",
+    description: "🏆 Uniswap Incubator Finalist (Top 8 Projects). Stealthfolio is a Uniswap V4 Hook and Vault system that provides confidential, front-run resistant portfolio rebalancing by using Fhenix's Fully Homomorphic Encryption (FHE) to keep sensitive strategy parameters, like target allocations and drift thresholds, private on-chain.",
+    tags: ["Privacy", "DeFi", "Asset Management", "Encryption", "Uniswap v4"],
+    demo: "https://github.com/MarcoBrian/Stealthfolio",
+  },
+  {
+    name: "Travelsure",
+    description: "Shortlisted at ETHOnline 2025. Top 15 % of Project Submissions 🏅. Travelsure is an AI-assisted parametric insurance platform that lets travelers protect any flight and get instant, on-chain payouts when delays occur. No forms, no waiting.",
+    tags: ["Chainlink", "DeFi", "Insurance", "Oracles"],
+    demo: "https://github.com/MarcoBrian/Travelsure",
+  },
+  {
     name: "StackFi",
     description: "StackFi is a non-custodial, oracle-secured, decentralized app that automates dollar-cost averaging (DCA) into crypto portfolios, safely and transparently on-chain.",
     tags: ["Chainlink", "DeFi", "Uniswap", "DCA","Automation"],
     demo: "https://github.com/MarcoBrian/StackFi",
-  },
-  {
-    name: "Travelsure",
-    description: "Travelsure is an AI-assisted parametric insurance platform that lets travelers protect any flight and get instant, on-chain payouts when delays occur. No forms, no waiting.",
-    tags: ["Chainlink", "DeFi", "Insurance", "Oracles"],
-    demo: "https://github.com/MarcoBrian/Travelsure",
   },
   {
     name: "Covid19 Telegram Bot",

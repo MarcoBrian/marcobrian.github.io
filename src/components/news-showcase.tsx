@@ -9,6 +9,15 @@ import { NewsItem as NewsItemType } from "./news-showcase/types"
 
 const newsItems: NewsItemType[] = [
   {
+    title: "Uniswap Incubator 7 - Demo Day",
+    description: "Stealthfolio presented in Uniswap Incubator Demo Day",
+    source: "YouTube",
+    date: "Dec 2025",
+    url: "https://www.youtube.com/watch?v=-P-bLlCtl6E",
+    videoId: "-P-bLlCtl6E",
+    type: "youtube"
+  },
+  {
     title: "Beyond the Hackathon: How to Keep Building in Polkadot",
     description: "Speaker at OpenGuild event discussing post-hackathon development strategies",
     source: "X (Twitter)",

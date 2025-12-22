@@ -35,11 +35,11 @@ export function About() {
               </p>
 
               <p className="text-lg text-[var(--text)] leading-relaxed">
-            Since then, I've built multiple projects recognized by 
+            Since then, I've built multiple finalist projects recognized by 
             <b> ETHGlobal and Token2049 </b>, including 
             <b> 1Option</b>, a decentralized options protocol, and
             <b> MicroPay</b>, a cross-chain micropayments framework for AI agents. 
-            I'm currently part of the <b> Uniswap Hook Incubator (UHI7) </b>, exploring how composable DeFi can power the next generation of on-chain products and shape the future of money.
+            I also completed <b> Uniswap Hook Incubator (UHI7) </b>, where I built <b> Stealthfolio </b>, a Top 8 finalist project presented in Demo Day.
               </p>
 
             <p className="text-lg text-[var(--text)] leading-relaxed">
